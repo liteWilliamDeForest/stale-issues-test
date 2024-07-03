@@ -2,8 +2,8 @@
 
 Testing how the label/remove stale issues GitHub Action works.
 
-Created 2 test issues and 2 test pull requests.
+Created a test issues and a test pull requests.
 
-Set the number of days stale to 1 and days stale before close to 1.
+Set the number of days stale to 0.01 (~15 min) and days stale before close to 0.01 (~15 min).
 
 Will update with screenshots.
