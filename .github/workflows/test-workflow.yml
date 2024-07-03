@@ -12,13 +12,13 @@ jobs:
         uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-issue-stale: 60
-          days-before-pr-stale: 60
-          days-before-issue-close: 7
-          days-before-pr-close: 14
+          days-before-issue-stale: 0.01
+          days-before-pr-stale: 0.01
+          days-before-issue-close: 0.01
+          days-before-pr-close: 0.01
           stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed in 7 days if no further activity occurs.'
           stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity. It will be closed in 14 days if no further activity occurs.'
           close-issue-message: 'This issue is now closed due to inactivity.'
-          close-pr-message: 'This pull request is now closed due to inactivity.'
+          close-pr-message: 'This pull request is now closed due to inactivity'
           stale-issue-label: 'stale'
           stale-pr-label: 'stale'
