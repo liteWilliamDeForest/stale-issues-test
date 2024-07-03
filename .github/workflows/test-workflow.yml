@@ -4,6 +4,11 @@ on:
     - cron: '30 1 * * *' # Runs daily at 1:30 AM UTC
   workflow_dispatch: # Allows manual triggering
 
+permissions: # Explicitly setting permissions for the workflow
+  issues: write
+  pull-requests: write
+  contents: read
+
 jobs:
   stale:
     runs-on: ubuntu-latest
