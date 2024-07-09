@@ -7,7 +7,7 @@ on:
 permissions: # Explicitly setting permissions for the workflow
   issues: write
   pull-requests: write
-  contents: write # Required for deleting branches
+  contents: read # Can change to 'write' if we want to be able to delete branches
 
 jobs:
   stale:
@@ -27,4 +27,3 @@ jobs:
           close-pr-message: 'This pull request is now closed due to inactivity.'
           stale-issue-label: 'stale'
           stale-pr-label: 'stale'
-          delete-branch: 'true'
