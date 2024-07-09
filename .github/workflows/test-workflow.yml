@@ -1,7 +1,7 @@
 name: Close Stale Issues and Pull Requests
 on:
   schedule:
-    - cron: '0 13 * * *' # Runs daily at 1:00 PM UTC (5:00 AM PST)
+    - cron: '*/15 * * * *' # Runs every 15 minutes
   workflow_dispatch: # Allows manual triggering
 
 permissions: # Explicitly setting permissions for the workflow
@@ -17,12 +17,12 @@ jobs:
         uses: actions/stale@v9
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          days-before-issue-stale: 1
-          days-before-pr-stale: 1
-          days-before-issue-close: 1
-          days-before-pr-close: 1
-          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed in 1 day if no further activity occurs.'
-          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity. It will be closed in 1 days if no further activity occurs.'
+          days-before-issue-stale: 0.01
+          days-before-pr-stale: 0.01
+          days-before-issue-close: 0.01
+          days-before-pr-close: 0.01
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed in 15 minutes if no further activity occurs.'
+          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity. It will be closed in 15 minutes if no further activity occurs.'
           close-issue-message: 'This issue is now closed due to inactivity.'
           close-pr-message: 'This pull request is now closed due to inactivity.'
           stale-issue-label: 'stale'
