@@ -30,6 +30,4 @@ Ran workflow 7/6/2024 (10:21am)
 
 
 
-
-
-Will update with screenshots.
+### 7/7 Update: Re-doing issue and PR test to check that the PR and branch are automatically closed when the workflow is run on the schedule rather than manually
